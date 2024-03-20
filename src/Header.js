@@ -6,7 +6,7 @@ const Header = (props) => {
   };
   return (
     <header className="app-header__title">
-      <h1>Super Sticky Notes</h1>
+      <h1>Gentle Reminders</h1>
       <aside className="app-header__controls">
         <button className="add-new" onClick={props.addNote}>
           + New Note
