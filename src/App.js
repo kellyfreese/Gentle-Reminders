@@ -17,7 +17,6 @@ class App extends Component {
   };
 
   addNote = () => {
-    //creat a new note
     const newNote = {
       id: Date.now(),
       title: "",
@@ -25,14 +24,10 @@ class App extends Component {
       doesMatchSearch: true
     };
 
-    //add the new note to the existing array in state
     this.setState({ notes: [newNote, ...this.state.notes] });
   };
 
   onType = (editMeId, updatedKey, updatedValue) => {
-    // editMeId == id of the note that is edited
-    //updatedKey == title or description field
-    //updatedValue == value of title or description
     const updatedNotes = this.state.notes.map((note) => {
       if (note.id !== editMeId) {
         return note;
